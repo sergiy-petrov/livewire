@@ -23,7 +23,7 @@ class TemporaryUploadedFile extends UploadedFile
         parent::__construct(stream_get_meta_data($tmpFile)['uri'], $this->path);
     }
 
-    public function getPath()
+    public function getPath(): string
     {
         return $this->storage->path(FileUploadConfiguration::directory());
     }
